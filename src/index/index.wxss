@@ -1,0 +1,261 @@
+/* src/index/index.wxss */
+page{
+  background-color: #f6f6f6;
+  min-height: 100%;
+}
+.companyBox{
+  width: 100%;
+  min-height: 250rpx;
+	background-color: rgba(41, 113, 221, 1);
+  padding: 60rpx 30rpx;
+  box-sizing: border-box;
+}
+.companyImg,.companyImg > image{
+  width: 180rpx;
+	height: 130rpx;
+	border-radius: 3rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+  background-color: #fff;
+}
+.companyInfo{
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 28rpx;
+}
+.companyName{
+  margin-bottom: 38rpx;
+}
+.companyBom .logo{
+  width: 50rpx;
+	height: 50rpx;
+	border-radius: 25rpx;
+  margin-right: 28rpx;
+}
+
+.companyBom .logo > image{
+  width: 50rpx;
+	height: 50rpx;
+	border-radius: 25rpx;
+  margin-right: 28rpx;
+}
+.companyLabel{
+  display: inline-block;
+  padding: 0 25rpx;
+	height: 50rpx;
+  line-height: 50rpx;
+	background-color: rgba(255, 255, 255, .2);
+	border-radius: 25rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+.site{
+  min-height: 80rpx;
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+  color: #353535;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  
+}
+.site .icon-dizhi{
+  color: #ffc637;
+  margin-right: 22rpx;
+  font-size: 32rpx;
+  vertical-align: middle;
+   margin-top: -16rpx; 
+}
+.partBg{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  
+}
+.title{
+  font-size: 30rpx;
+  color: #353535;
+  font-weight: bold;
+  padding-top: 48rpx;
+  box-sizing: border-box;
+  
+  
+}
+.photo{
+  margin: 15rpx -15rpx;
+  padding-bottom: 15rpx;
+}
+.photoList{
+  padding: 15rpx;
+   box-sizing: border-box;
+   width: 33.33%;
+   float: left;
+}
+.photoBg{
+  background-color: rgba(242, 242, 242, 1);
+  font-size: 20rpx;
+  color: #a9a9a9;
+  height: 210rpx;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.photoBg .icon-tianjia{
+  font-size: 60rpx;
+  line-height: 210rpx;
+}
+.photoBg>view{
+  position: absolute;
+  bottom:26rpx;
+  left:50%;
+  transform:translate(-50%,0);
+  width: 100%;
+   
+}
+
+.priceList{
+  padding: 24rpx 0;
+  box-sizing:border-box;
+  min-height: 178rpx;
+  border-bottom: 2rpx solid rgba(204, 204, 204, 1);
+}
+.carImg{
+  width: 180rpx;
+	height: 130rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+  float: left;
+
+}
+.carInfo{
+  overflow: hidden;
+  color: #353535;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+}
+.priceBox{
+  padding-top: 30rpx;
+}
+.carOne{
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.carTwo{
+  font-size: 22rpx;
+  margin:14rpx 0;
+}
+.carThree{
+  font-size: 24rpx;
+  color: #2971dd;
+}
+.carInfo .icon-tianjia1{
+  font-size: 54rpx;
+  color: rgba(41, 113, 221, 1);
+}
+.carBg{
+  margin-top: 30rpx;
+  margin-bottom:60rpx;
+  
+}
+
+
+.orderTop{
+  padding: 60rpx 0rpx;
+  box-sizing:border-box;
+  min-height: 190rpx;
+}
+.orderImg{
+  width: 180rpx;
+	height: 130rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+  
+}
+.orderImg>image{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+.orderBaseInfo{
+  overflow: hidden;
+  color: #353535;
+}
+.orderPrice{
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-bottom: 14rpx;
+  
+}
+.orderTip{
+  font-size: 22rpx;
+  margin: 14rpx 0;
+  line-height: 28rpx;
+}
+.orderText{
+  font-size: 24rpx;
+  color: #2971dd;
+
+}
+
+
+.orderPopup{
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+   background-color: #fff;
+  padding: 50rpx 50rpx 70rpx 50rpx;
+  box-sizing: border-box;
+  width: 100%;
+  z-index:6;
+}
+.orderPopup .title{
+  font-size: 30rpx;
+  color: #353535;
+}
+.orderPopup .title .icon-close-o{
+  color: #878787;
+  font-size: 40rpx;
+  font-weight:normal;
+  
+}
+.agreement{
+  font-size: 24rpx;
+  color: #888888;
+}
+.agreement>text{
+  color: #2971dd;
+}
+.icon-xuanzhong{
+  margin-right: 12rpx;
+}
+.buyBtn{
+  width: 100%;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: rgba(41, 113, 221, 1);
+	border-radius: 45rpx;
+  margin-top: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+
+
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 5rpx;
+  height: 26rpx;
+  width: 26rpx;
+  margin-top: -4rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  font-size: 30rpx;
+}

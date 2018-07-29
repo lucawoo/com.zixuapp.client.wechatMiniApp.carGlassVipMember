@@ -1,0 +1,24 @@
+<!--src/my/index.wxml-->
+<view class='userInfo'>
+  <view class='userImg'>
+    <image src='{{userInfo.headimgurl}}'></image>
+  </view>
+  <view class='userText'>{{userInfo.nickname}}</view>
+  <!-- <view class='userTell'>13800138000</view> -->
+</view>
+<view class='userListBox'>
+  <navigator class='userList' url='../my/orderList' hover-class='none'>
+    <view class='fl'>
+      <icon class='iconfont icon-dingdan'></icon>
+      <text>我的订单</text>
+    </view>
+    <icon class='fr iconfont icon-youjiantou'></icon>
+  </navigator>
+  <button class='userList' open-type="contact" plain="true">
+    <view class='fl'>
+      <icon class='iconfont icon-serve'></icon>
+      <text>客服中心</text>
+    </view>
+    <icon class='fr iconfont icon-youjiantou'></icon>
+  </button>
+</view>

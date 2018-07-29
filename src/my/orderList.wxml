@@ -1,0 +1,32 @@
+<!--src/my/my.wxml-->
+<view class='orderListBox'>
+  <view class='orderTop'>
+    <view class='orderImg fl'>
+     <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531826538124&di=76e05cba7947dcc4f04a195597260231&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F013cca592d4bc9a801216a3e886614.jpg%403000w_1l_2o_100sh.jpg'></image>
+    </view>
+    <view class='orderBaseInfo'>
+      <view class='orderPrice'>50万-100万（含）</view>
+      <view class='orderTip'>一年免费三次更换前（后）挡玻璃一年免费三次更换前（后）挡玻璃一年免费三次更换前（后）挡玻璃</view>
+      <view class='orderText'>¥358/年</view>
+
+    </view>
+  </view>
+  <view class='orderBom'>
+    <view class='orderList clearfix'>
+     <view class='fl'>订单号:</view>
+     <view class='fr'>58965478fr321563era5896478965lop5</view>
+   </view>
+   <view class='orderList clearfix'>
+     <view class='fl'>下单时间:</view>
+     <view class='fr'>2018-10-01 11:38:32</view>
+   </view>
+   <view class='orderList clearfix'>
+     <view class='fl'>已付款:</view>
+     <view class='fr'>358.00元</view>
+   </view>
+   <view class='orderList clearfix'>
+     <view class='fl'>使用详情:</view>
+     <view class='fr'>使用中</view>
+   </view>
+  </view>
+</view>

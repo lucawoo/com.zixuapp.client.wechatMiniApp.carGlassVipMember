@@ -1,0 +1,10 @@
+<view class='loginBox'>
+  <view class='userLogo'>
+    <image src='{{wechatAuthorizer.headImg}}'></image>
+  </view>
+  <view class='loginText'>
+   <view>我们需要获取您的公开信息（昵称，头像等)</view>
+   <view>用于实现资料同步</view>
+  </view>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权微信登录</button>
+</view>

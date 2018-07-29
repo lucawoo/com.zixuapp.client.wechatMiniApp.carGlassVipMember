@@ -1,0 +1,10 @@
+{
+  "extEnable": true,
+  "extAppid": "wxc6b7063fddb82422",
+  "ext": {
+    "merchantID":1,
+    "authorizerID":14,
+    "gatewayUrl":"http://www.zixuapp.com",
+    "pre":"com_zixuapp_"
+  }
+}

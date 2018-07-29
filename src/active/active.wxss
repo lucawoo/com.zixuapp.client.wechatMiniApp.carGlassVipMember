@@ -1,0 +1,88 @@
+/* src/active/active.wxss */
+
+page {
+  background-color: #f6f6f6;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.activeBg {
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 0 0 40rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.activeTitle {
+  color: #717171;
+  border-bottom: 1px solid #f2f2f2;
+  height: 100rpx;
+  font-size: 28rpx;
+  padding-top: 48rpx;
+  box-sizing: border-box;
+}
+
+.activeList {
+  font-size: 28rpx;
+  min-height: 86rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+
+.listLeft {
+  width: 160rpx;
+  max-width: 160rpx;
+  float: left;
+  min-height: 46rpx;
+  line-height: 46rpx;
+  margin-right: 30rpx;
+}
+
+.listRight {
+  overflow: hidden;
+  width: 100%;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+
+.activeBom {
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+
+.activeBtn {
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
+  background-color: #56bb36;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  z-index: 2;
+}
+
+.activeAgreement {
+  font-size: 26rpx;
+  color: #707070;
+  margin: 50rpx 0 36rpx;
+}
+
+.activeColor {
+  color: #315ac0;
+  margin: 0 8rpx;
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 5rpx;
+  height: 26rpx;
+  width: 26rpx;
+  margin-top: -4rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  font-size: 30rpx;
+}
