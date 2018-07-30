@@ -117,16 +117,8 @@ util.httpRequest = function (obj, abnormalRetry) {
         }
         wx.showModal({
           content: (data.errCodeDes == undefined) ? "请求失败" : data.errCodeDes,
-          showCancel: true,
-          cancelText: "取消",
-          confirmText: "重试",
-          success: function (res) {
-            if (res.confirm) {
-              util.httpRequest(obj, true);
-            } else {
-              obj.failFunc();
-            }
-          }
+          showCancel: false,
+          confirmText: "我知道了",
         });
         return;
       }
@@ -190,7 +182,7 @@ util.uploadFile = function (obj, abnormalRetry) {
           }
         })
       }
-      obj.successFunc(data.data);
+      obj.success(data.data);
     },
     fail: function () {
       obj.fail();

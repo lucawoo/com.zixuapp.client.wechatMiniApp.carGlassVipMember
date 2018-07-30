@@ -94,11 +94,12 @@ page{
    width: 33.33%;
    float: left;
 }
-.photoBg{
+.photoBg , .photoBg>image{
   background-color: rgba(242, 242, 242, 1);
   font-size: 20rpx;
   color: #a9a9a9;
   height: 210rpx;
+  width: 100%;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -122,7 +123,12 @@ page{
   min-height: 178rpx;
   border-bottom: 2rpx solid rgba(204, 204, 204, 1);
 }
-.carImg{
+
+.priceList:nth-last-child(1){
+  border-bottom:none!important;
+}
+
+.carImg ,.carImg >image{
   width: 180rpx;
 	height: 130rpx;
   overflow: hidden;
@@ -164,8 +170,6 @@ page{
   margin-bottom:60rpx;
   
 }
-
-
 .orderTop{
   padding: 60rpx 0rpx;
   box-sizing:border-box;

@@ -17,103 +17,39 @@
   <icon class='iconfont icon-dizhi fl'></icon>
   <text>{{authorizerConfig.address}}</text>
 </view>
-
-<view class='partBg'>
+<view class='partBg' wx-if="{{photoUploadUrl}}">
   <view class='title'>拍照上传</view>
   <view class='photo clearfix'>
-
-    <view class='photoList' bindtap="fileUpload">
-      <view class='photoBg'>
+    <view class='photoList' wx:for="{{photoUploadList}}" bindtap="fileUpload" data-uuid="{{item.uuid}}">
+      <view class='photoBg' wx:if="{{!photoUploadUrl[item.uuid]}}">
         <icon class='iconfont icon-tianjia'></icon>
-        <view>前挡风玻璃照片</view>
+        <view>{{item.keyName}}</view>
       </view>
-    </view>
-
-    <view class='photoList'>
-      <view class='photoBg'>
-        <icon class='iconfont icon-tianjia'></icon>
-        <view>后挡风玻璃照片</view>
-      </view>
-    </view>
-    <view class='photoList'>
-      <view class='photoBg'>
-        <icon class='iconfont icon-tianjia'></icon>
-        <view>车子四周照片</view>
-      </view>
-    </view>
-    <view class='photoList'>
-      <view class='photoBg'>
-        <icon class='iconfont icon-tianjia'></icon>
-        <view>车子四周照片</view>
-      </view>
-    </view>
-    <view class='photoList'>
-      <view class='photoBg'>
-        <icon class='iconfont icon-tianjia'></icon>
-        <view>行驶证照片</view>
+      <view class='photoBg' wx:if="{{photoUploadUrl[item.uuid]}}">
+        <image src='{{photoUploadUrl[item.uuid]}}'></image>
       </view>
     </view>
   </view>
 </view>
-
-<view class='partBg carBg'>
+<view class='partBg carBg' wx:if="{{vehicleTypePrice}}">
   <view class='title'>选择车型车价</view>
   <view class='priceBox'>
-    <view class='priceList' catchtap="exchange">
+    <view class='priceList' catchtap="exchange" wx:for="{{vehicleTypePrice}}" wx:for-index="index" data-index="{{index}}">
       <view class='carImg'>
-        <image src=''></image>
+        <image src='{{item.photoUrl}}'></image>
       </view>
       <view class='carInfo'>
         <view class='carText'>
-          <view class='carOne'>30万以下（含）</view>
-          <view class='carTwo'>一年免费三次更换前（后）挡玻璃</view>
-          <view class='carThree'>¥158/年</view>
-        </view>
-        <icon class='iconfont icon-tianjia1'></icon>
-      </view>
-    </view>
-    <view class='priceList' catchtap="exchange">
-      <view class='carImg'>
-        <image src=''></image>
-      </view>
-      <view class='carInfo'>
-        <view class='carText'>
-          <view class='carOne'>30万-50万（含）</view>
-          <view class='carTwo'>一年免费三次更换前（后）挡玻璃</view>
-          <view class='carThree'>¥258/年</view>
-        </view>
-        <icon class='iconfont icon-tianjia1'></icon>
-      </view>
-    </view>
-    <view class='priceList' catchtap="exchange">
-      <view class='carImg'>
-        <image src=''></image>
-      </view>
-      <view class='carInfo'>
-        <view class='carText'>
-          <view class='carOne'>50万-100万（含）</view>
-          <view class='carTwo'>一年免费三次更换前（后）挡玻璃</view>
-          <view class='carThree'>¥358/年</view>
-        </view>
-        <icon class='iconfont icon-tianjia1'></icon>
-      </view>
-    </view>
-    <view class='priceList' catchtap="exchange">
-      <view class='carImg'>
-        <image src=''></image>
-      </view>
-      <view class='carInfo'>
-        <view class='carText'>
-          <view class='carOne'>100万以上或特种玻璃车辆</view>
-          <view class='carTwo'>一年免费三次更换前（后）挡玻璃</view>
-          <view class='carThree'>¥598/年</view>
+          <view class='carOne'>{{item.title}}</view>
+          <view class='carTwo'>{{item.subTitle}}</view>
+          <view class='carThree'>¥{{item.yearTotalFee / 100}}/年</view>
         </view>
         <icon class='iconfont icon-tianjia1'></icon>
       </view>
     </view>
   </view>
-
 </view>
+
 <!-- 确认订单 -->
 <view class='orderPopup' hidden="{{exchange=='true'?false:true}}">
   <view class='title'>

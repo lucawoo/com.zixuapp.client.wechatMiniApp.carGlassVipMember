@@ -1,18 +1,15 @@
 <!--src/active/active.wxml-->
 <form bindsubmit="formSubmit">
   <view class='activeBg' wx:if="{{inputKey}}">
-
     <view class='activeTitle' wx:if="{{inputKey.required.length != 0}}">
       <text>必填信息</text>
     </view>
-
     <view class='activeList' wx:for="{{inputKey.required}}">
       <view class='listLeft'>{{item.keyName}}</view>
       <view class='listRight'>
         <input placeholder='请输入{{item.keyName}}' name="{{item.uuid}}"></input>
       </view>
     </view>
-
     <view class='activeTitle' wx:if="{{inputKey.optional.length != 0}}">
       <text>选填信息</text>
     </view>
@@ -22,7 +19,6 @@
         <input placeholder='请输入{{item.keyName}}' name="{{item.uuid}}"></input>
       </view>
     </view>
-
     <!-- <view class='activeAgreement'>
     <label class="checkbox" wx:for="{{items}}" bindchange="checkboxChange">
       <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
@@ -31,10 +27,8 @@
     <text class='activeColor'>技术支持</text>和
     <text class='activeColor'>会员卡信息使用声明</text>
   </view> -->
-
     <view class='activeBom'>
       <button formType='submit' class='activeBtn'>立即激活</button>
     </view>
-
   </view>
 </form>
