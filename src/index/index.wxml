@@ -31,10 +31,11 @@
     </view>
   </view>
 </view>
+
 <view class='partBg carBg' wx:if="{{vehicleTypePrice}}">
   <view class='title'>选择车型车价</view>
   <view class='priceBox'>
-    <view class='priceList' catchtap="exchange" wx:for="{{vehicleTypePrice}}" wx:for-index="index" data-index="{{index}}">
+    <view class='priceList' catchtap="setVehicleTypePrice" wx:for="{{vehicleTypePrice}}" wx:for-index="index" data-index="{{index}}">
       <view class='carImg'>
         <image src='{{item.photoUrl}}'></image>
       </view>
@@ -50,34 +51,31 @@
   </view>
 </view>
 
-<!-- 确认订单 -->
-<view class='orderPopup' hidden="{{exchange=='true'?false:true}}">
+<view class='orderPopup' wx:if="{{vehicleTypePriceIndex != null}}">
   <view class='title'>
     <text>确认订单：</text>
-    <icon class='iconfont icon-close-o fr' catchtap="close"></icon>
+    <icon class='iconfont icon-close-o fr' catchtap="cleanVehicleTypePrice"></icon>
   </view>
 
   <view class='orderTop'>
     <view class='orderImg fl'>
-      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531826538124&di=76e05cba7947dcc4f04a195597260231&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F013cca592d4bc9a801216a3e886614.jpg%403000w_1l_2o_100sh.jpg'></image>
+      <image src='{{vehicleTypePrice[vehicleTypePriceIndex].photoUrl}}'></image>
     </view>
     <view class='orderBaseInfo'>
-      <view class='orderPrice'>50万-100万（含）</view>
-      <view class='orderTip'>一年免费三次更换前（后）挡玻璃</view>
-      <view class='orderText'>¥358/年</view>
-
+      <view class='orderPrice'>{{vehicleTypePrice[vehicleTypePriceIndex].title}}</view>
+      <view class='orderTip'>{{vehicleTypePrice[vehicleTypePriceIndex].subTitle}}</view>
+      <view class='orderText'>¥{{vehicleTypePrice[vehicleTypePriceIndex].yearTotalFee/100}}/年</view>
     </view>
   </view>
 
-  <view class='agreement'>
+  <!-- <view class='agreement'>
     <label class="checkbox" wx:for="{{items}}" bindchange="checkboxChange">
       <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
     </label>
     我已阅读并同意
     <text>《常州广安新能源汽车玻璃会员服务协议》</text>
-  </view>
-
-  <navigator url='../index/orderSuccess' hover-class='none' class='buyBtn'>确认购买</navigator>
+  </view> -->
+  <button hover-class='none' class='buyBtn' bindtap='toPay'>确认购买</button>
 </view>
 
-<view class='shadeBg' hidden="{{exchange=='true'?false:true}}"></view>
+<view class='shadeBg' wx:if="{{vehicleTypePriceIndex != null}}"></view>

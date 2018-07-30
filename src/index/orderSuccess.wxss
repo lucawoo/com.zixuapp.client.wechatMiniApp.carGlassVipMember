@@ -31,7 +31,7 @@ page{
 
 .orderListBox{
   width:100%;
-	min-height: 450rpx;
+	/* min-height: 450rpx; */
 	background-color: rgba(255, 255, 255, 1);
 	border-radius: 10rpx;
 }
