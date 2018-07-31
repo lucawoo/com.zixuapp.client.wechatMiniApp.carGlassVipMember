@@ -10,6 +10,7 @@ page{
 	min-height: 450rpx;
 	background-color: rgba(255, 255, 255, 1);
 	border-radius: 10rpx;
+  margin-bottom: 30rpx;
 }
 
 .orderTop{
