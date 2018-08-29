@@ -1,4 +1,4 @@
-/* src/agreement/agreement.wxss */
+@import "/utils/wxParse/wxParse.wxss";
 .agreeBox{
   margin-left: 24rpx;
   font-size: 26rpx;

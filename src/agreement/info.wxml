@@ -1,3 +1,4 @@
+<import src="/utils/wxParse/wxParse.wxml"/>
 <view class='agreeBox'>
-
+<template is="wxParse" data="{{wxParseData:agreement.nodes}}"/>
 </view>

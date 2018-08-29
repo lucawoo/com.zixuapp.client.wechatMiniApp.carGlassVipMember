@@ -74,7 +74,9 @@ Page({
     global.this.setData({ vehicleTypePriceIndex: index });
   },
   viewAgreement:function(){
-    
+    wx.navigateTo({
+      url: "/src/agreement/info"
+    })
   },
   toPay:function(e){
     // 将套餐下标返回后台
