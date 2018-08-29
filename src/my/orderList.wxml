@@ -7,8 +7,8 @@
     <view class='orderBaseInfo'>
       <view class='orderPrice'>{{item.addData.title}}</view>
       <view class='orderTip'>{{item.addData.subTitle}}</view>
-      <view class='orderText'>¥{{item.addData.yearTotalFee / 100}}/年</view>
-
+      <!-- <view class='orderText'>¥{{item.addData.yearTotalFee / 100}}/年</view> -->
+      <view class='orderText' wx:for="{{item.addData.arrayJson}}">¥{{item.price/100}}/{{item.year}}年</view>
     </view>
   </view>
   <view class='orderBom'>

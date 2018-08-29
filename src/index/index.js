@@ -4,6 +4,17 @@ Page({
     photoUploadUrl:{}
   },
   onLoad:function(){
+    // 客户新增需求，已经购买过的用户再次登录小程序，显示页面应该是我的订单页面
+    app.util.httpRequest({
+      url: "/client/wechatMiniApp/carGlassVipMember/getUserOrder",
+      successFunc: function (res) {
+        if(res.length != 0){
+          wx.navigateTo({
+            url: "/src/my/orderList"
+          })
+        }
+      }
+    });
     // 获取基本信息
     app.util.httpRequest({
       url: "/client/wechatMiniApp/carGlassVipMember/getConfig",

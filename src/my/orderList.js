@@ -6,8 +6,7 @@ Page({
     app.util.httpRequest({
       url: "/client/wechatMiniApp/carGlassVipMember/getUserOrder",
       successFunc: function (res) {
-        console.log(res)
-        global.this.setData({ userOrder: res });
+        global.this.setData({ userOrder: res});
       }
     });
   }
