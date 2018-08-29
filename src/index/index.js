@@ -73,13 +73,20 @@ Page({
     }
     global.this.setData({ vehicleTypePriceIndex: index });
   },
-  toPay:function(){
+  viewAgreement:function(){
+    
+  },
+  toPay:function(e){
+    // 将套餐下标返回后台
+    var orderTypeIndex = e.detail.value;
     var vehicleTypePriceIndex = global.this.data.vehicleTypePriceIndex;
     var photoUploadUrl = global.this.data.photoUploadUrl;
     var vehicleTypePrice = global.this.data.vehicleTypePrice[vehicleTypePriceIndex];
+    vehicleTypePrice.orderTypeIndex = orderTypeIndex;
     var postData = {
       vehicleTypePriceID: vehicleTypePrice.id,
-      photoUrl: photoUploadUrl
+      photoUrl: photoUploadUrl,
+      subscript:orderTypeIndex
     };
     // 保存到全局一下 在另一个页面拿
     wx.setStorageSync("buyVipPlanVehicleTypePriceTemp", vehicleTypePrice);

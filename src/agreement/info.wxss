@@ -1,0 +1,18 @@
+/* src/agreement/agreement.wxss */
+.agreeBox{
+  margin-left: 24rpx;
+  font-size: 26rpx;
+  color: #898989;
+}
+.partBox{
+  border-bottom: 1px solid #eaeaea;
+  padding: 24rpx 24rpx 24rpx 0;
+  line-height: 40rpx;
+
+}
+.partTitle{
+  font-size: 30rpx;
+  color: #000;
+  margin-bottom: 10rpx;
+  
+}

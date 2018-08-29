@@ -4,6 +4,7 @@
     "src/index/index",    
     "src/login/login",
     "src/my/index",
+    "src/agreement/info",
     "src/index/orderSuccess",
     "src/my/orderList"
   ],

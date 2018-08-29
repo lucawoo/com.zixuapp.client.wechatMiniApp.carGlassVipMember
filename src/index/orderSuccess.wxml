@@ -12,8 +12,7 @@
     <view class='orderBaseInfo'>
       <view class='orderPrice'>{{buyVipPlanVehicleTypePriceTemp.title}}</view>
       <view class='orderTip'>{{buyVipPlanVehicleTypePriceTemp.subTitle}}</view>
-      <view class='orderText'>¥{{buyVipPlanVehicleTypePriceTemp.yearTotalFee / 100}}/年</view>
-
+      <view class='orderText'>¥{{buyVipPlanVehicleTypePriceTemp.arrayJson[buyVipPlanVehicleTypePriceTemp.orderTypeIndex].price / 100}}/{{buyVipPlanVehicleTypePriceTemp.arrayJson[buyVipPlanVehicleTypePriceTemp.orderTypeIndex].year}}年</view>
     </view>
   </view>
   <view class='orderBom'>
@@ -23,7 +22,7 @@
     </view>
     <view class='orderList clearfix'>
       <view class='fl'>已付款:</view>
-      <view class='fr'>{{buyVipPlanVehicleTypePriceTemp.yearTotalFee / 100}}元</view>
+      <view class='fr'>{{buyVipPlanVehicleTypePriceTemp.arrayJson[buyVipPlanVehicleTypePriceTemp.orderTypeIndex].price / 100}}元</view>
     </view>
   </view>
 </view>

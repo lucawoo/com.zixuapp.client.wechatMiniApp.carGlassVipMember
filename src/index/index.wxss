@@ -160,6 +160,8 @@ page{
 .carThree{
   font-size: 24rpx;
   color: #2971dd;
+  display: inline-block;
+  margin-right: 10rpx;
 }
 .carInfo .icon-tianjia1{
   font-size: 54rpx;
@@ -205,7 +207,8 @@ page{
 .orderText{
   font-size: 24rpx;
   color: #2971dd;
-
+  display: inline-block;
+  margin-right: 12rpx;
 }
 
 

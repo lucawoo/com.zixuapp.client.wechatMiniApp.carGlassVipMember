@@ -4,7 +4,7 @@
   "ext": {
     "merchantID":1,
     "authorizerID":14,
-    "gatewayUrl":"http://www.zixuapp.com",
+    "gatewayUrl":"http://test.zixuapp.com",
     "pre":"com_zixuapp_"
   }
 }

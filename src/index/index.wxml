@@ -43,7 +43,7 @@
         <view class='carText'>
           <view class='carOne'>{{item.title}}</view>
           <view class='carTwo'>{{item.subTitle}}</view>
-          <view class='carThree'>¥{{item.yearTotalFee / 100}}/年</view>
+          <view class='carThree' wx:for="{{item.arrayJson}}">¥{{item.price / 100}}/{{item.year}}年</view>
         </view>
         <icon class='iconfont icon-tianjia1'></icon>
       </view>
@@ -64,18 +64,22 @@
     <view class='orderBaseInfo'>
       <view class='orderPrice'>{{vehicleTypePrice[vehicleTypePriceIndex].title}}</view>
       <view class='orderTip'>{{vehicleTypePrice[vehicleTypePriceIndex].subTitle}}</view>
-      <view class='orderText'>¥{{vehicleTypePrice[vehicleTypePriceIndex].yearTotalFee/100}}/年</view>
+
+      <view class='orderText' wx:for="{{vehicleTypePrice[vehicleTypePriceIndex].arrayJson}}">¥{{item.price/100}}/{{item.year}}年</view>
     </view>
   </view>
 
-  <!-- <view class='agreement'>
+  <view class='agreement'>
     <label class="checkbox" wx:for="{{items}}" bindchange="checkboxChange">
       <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
     </label>
-    我已阅读并同意
-    <text>《常州广安新能源汽车玻璃会员服务协议》</text>
-  </view> -->
-  <button hover-class='none' class='buyBtn' bindtap='toPay'>确认购买</button>
+    确认购买即表示已阅读并同意
+    <text bindtap='viewAgreement'>《{{authorizerConfig.agreementTitle}}》</text>
+  </view>
+  <picker bindchange="toPay" range="{{vehicleTypePrice[vehicleTypePriceIndex].arrayJson}}" range-key="year">
+    <button hover-class='none' class='buyBtn'>确认购买</button>
+  </picker>
+
 </view>
 
 <view class='shadeBg' wx:if="{{vehicleTypePriceIndex != null}}"></view>
